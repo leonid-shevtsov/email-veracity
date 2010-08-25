@@ -39,9 +39,9 @@ module ActiveModel
       #   When left empty, both A and MX are searched.
       #
     
-      # def initialize(options = {})
-      #   super
-      # end
+      def initialize(options = {})
+        super(EmailVeracity::Config::DEFAULT_OPTIONS.merge(options))
+      end
         
       def validate_each(record, attribute, value)        
         # we aren't interested in reproducing the :presence => true 
@@ -50,7 +50,7 @@ module ActiveModel
         unless value.blank?
 
           old_options = EmailVeracity::Config.options.clone
-          EmailVeracity::Config.update options
+          EmailVeracity::Config.options = options
           
           address = EmailVeracity::Address.new value
           unless address.valid?
@@ -69,7 +69,10 @@ module ActiveModel
             record.errors.add attribute, message unless message.blank?
           end
         end
-        EmailVeracity::Config.options = old_options
+          
+        
+        EmailVeracity::Config.options = old_options if old_options
+        
       end
     
     end

@@ -9,7 +9,6 @@ require 'email_veracity/resolver'
 require 'email_veracity/domain'
 require 'email_veracity/address'
 
-
 module EmailVeracity
 
   class Error < StandardError; end

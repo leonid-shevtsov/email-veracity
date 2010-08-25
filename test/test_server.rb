@@ -21,7 +21,7 @@ class TestServer < Test::Unit::TestCase
 
   def test_creating_a_new_blank_server_object_and_setting_its_name_after_initialization
     new_server = EmailVeracity::Server.new('igvita.com')
-    assert_raise NoMethodError, 'Should fail miserably.' do
+    assert_raise NameError, 'Should fail miserably.' do
       new_server.name = name
     end
   end

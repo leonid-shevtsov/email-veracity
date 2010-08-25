@@ -57,3 +57,42 @@ Contains methods to query the domain for information.
 
 Abstracts Resolv::DNS into a super-simple single public method, this is where
 the timeout error is raised.
+
+
+## Rails 3 Validator
+
+Rails 3 Validator now included.  
+
+    validates :email, :email_veracity => true 
+
+    
+You can also validate with options.
+
+    validates :email, :email_veracity => { :option => value } 
+    
+### Validation Options 
+
+#### skip_lookup _(false)_      
+When set to true, the domain is not checked for a valid server or MX record.  This is
+definitely faster, but will accempt obvious typos like 'user@yahoo.cm'
+
+#### timeout _(2)_
+      
+Set the timeout for DNS lookup (in seconds). 
+
+#### enforce_whitelist _(true)_
+Don't look up servers we already know about.  The included whitelist includes:
+aol.com, gmail.com, hotmail.com, me.com, mac.com, msn.com, rogers.com, 
+sympatico.ca, yahoo.com, telus.com, sprint.com, sprint.ca
+ 
+#### enforce_blacklist _(false)_
+Don't allow email addresses that are from common spam hosts. Blacklist includes:
+dodgeit.com, mintemail.com, mintemail.uni.cc, 1mintemail.mooo.com, spammotel.com, trashmail.net
+
+#### valid_pattern _(see config.rb)_
+
+A regular expression to check addresses against.
+
+#### must_include _([])_
+Set which records are required to be searched for lookup.  Options include :a and :mx.
+When left empty, both A and MX are searched.

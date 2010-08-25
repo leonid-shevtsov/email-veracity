@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{email_veracity}
-  s.version = "0.6.0"
+  s.version = "0.6.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Carsten Nielsen"]
@@ -32,6 +32,7 @@ Gem::Specification.new do |s|
      "lib/email_veracity/server.rb",
      "lib/email_veracity/utils.rb",
      "lib/email_veracity/validatability.rb",
+     "lib/email_veracity_validator.rb",
      "test/helper.rb",
      "test/test_address.rb",
      "test/test_config.rb",

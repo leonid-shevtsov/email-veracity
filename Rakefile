@@ -11,7 +11,7 @@ begin
     gem.homepage = 'http://github.com/heycarsten/email-veracity'
     gem.authors = 'Carsten Nielsen'
     
-    gem.add_dependency 'activemodel', '3.0.0.rc'
+    gem.add_dependency 'activemodel', '>= 3.0.0.rc'
     
     gem.add_development_dependency 'test-unit', '>= 2.1.1'
     gem.add_development_dependency 'bundler', '>= 1.0.0.rc.3'

@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Carsten Nielsen"]
-  s.date = %q{2010-08-25}
+  s.date = %q{2010-11-17}
   s.description = %q{Email Veracity abstracts an email address into a series of objects which makes it easy to see if an address is invalid, and if so, why.}
   s.email = %q{heycarsten@gmail.com}
   s.extra_rdoc_files = [

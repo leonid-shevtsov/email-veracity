@@ -8,6 +8,7 @@ require 'email_veracity/server'
 require 'email_veracity/resolver'
 require 'email_veracity/domain'
 require 'email_veracity/address'
+require 'email_veracity/railtie'
 require 'email_veracity_validator'
 
 module EmailVeracity

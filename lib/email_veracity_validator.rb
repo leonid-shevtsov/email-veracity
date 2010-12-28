@@ -54,19 +54,9 @@ module ActiveModel
           
           address = EmailVeracity::Address.new value
           unless address.valid?
-            message =   case 
-                        when address.errors.include?(:malformed)
-                          'does not look like a valid email address'
-                        when address.errors.include?(:no_records)
-                          'does not appear to be a real email address'
-                        when address.errors.include?(:no_address_servers)
-                          'domain does not have valid DNS entry'
-                        when address.errors.include?(:no_exchange_servers)
-                          'domain does not have a valid MX entry'
-                        when address.errors.include?(:blacklisted)
-                          'is from a blacklisted domain'
-                        end
-            record.errors.add attribute, message unless message.blank?
+            address.errors.each do |error|
+              record.errors.add attribute, I18n.t(error.to_s, :scope => 'activerecord.errors.messages.email_veracity')
+            end
           end
         end
           

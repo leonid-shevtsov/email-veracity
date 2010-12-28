@@ -1,0 +1,10 @@
+en:
+  activerecord:
+    errors:
+      messages:
+        email_veracity:
+          malformed: 'does not look like a valid email address'
+          no_records: 'does not appear to be a real email address'
+          no_address_servers: 'domain does not have valid DNS entry'
+          no_exchange_servers: 'domain does not have a valid MX entry'
+          blacklisted: 'is from a blacklisted domain'

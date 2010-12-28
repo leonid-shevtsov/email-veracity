@@ -1,0 +1,10 @@
+en:
+  activerecord:
+    errors:
+      messages:
+        email_veracity:
+          malformed: 'имеет неправильный формат'
+          no_records: 'не является настоящим адресом'
+          no_address_servers: 'у домена не обнаружена запись DNS'
+          no_exchange_servers: 'у домена не обнаружена запись MX'
+          blacklisted: 'принадлежит домену из черного списка'

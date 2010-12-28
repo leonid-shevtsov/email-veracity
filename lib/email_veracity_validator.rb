@@ -54,9 +54,7 @@ module ActiveModel
           
           address = EmailVeracity::Address.new value
           unless address.valid?
-            address.errors.each do |error|
-              record.errors.add attribute, I18n.t(error.to_s, :scope => 'activerecord.errors.messages.email_veracity')
-            end
+            record.errors.add attribute, I18n.t(address.errors.first.to_s, :scope => 'activerecord.errors.messages.email_veracity')
           end
         end
           

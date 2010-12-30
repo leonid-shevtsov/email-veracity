@@ -1,0 +1,12 @@
+en:
+  activerecord:
+    errors:
+      messages:
+        email_veracity:
+          invalid: 'no parece ser una dirección de correo electrónico real'
+          malformed: 'no se parece a una dirección válida de correo electrónico'
+          no_records: 'no parece ser una dirección de correo electrónico real'
+          timed_out: 'petición al servidor ha agotado el tiempo'
+          no_address_servers: 'dominio no tienen entrada DNS válido'
+          no_exchange_servers: 'dominio no tienen entrada MX válido'
+          blacklisted: 'es de un dominio de la lista negra'

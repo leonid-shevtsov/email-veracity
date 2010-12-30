@@ -54,7 +54,10 @@ module ActiveModel
           
           address = EmailVeracity::Address.new value
           unless address.valid?
-            record.errors.add attribute, I18n.t(address.errors.first.to_s, :scope => 'activerecord.errors.messages.email_veracity')
+            # such a dirty hack. it is more appropriate to fix Validatability#errors not to re-validate the object each time
+            # i'd like to emphasise that we're guaranteed to have the @errors variable here because we've just called #valid?
+            error = address.send(:instance_variable_get, '@errors').first || 'invalid'
+            record.errors.add attribute, I18n.(error.to_s, :scope => 'activerecord.errors.messages.email_veracity')
           end
         end
           

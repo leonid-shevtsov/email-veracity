@@ -3,8 +3,10 @@ en:
     errors:
       messages:
         email_veracity:
+          invalid: 'does not appear to be a real email address'
           malformed: 'does not look like a valid email address'
           no_records: 'does not appear to be a real email address'
+          timed_out: 'request to server timed out'
           no_address_servers: 'domain does not have valid DNS entry'
           no_exchange_servers: 'domain does not have a valid MX entry'
           blacklisted: 'is from a blacklisted domain'

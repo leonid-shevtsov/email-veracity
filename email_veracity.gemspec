@@ -63,22 +63,22 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<activemodel>, [">= 3.0.0.rc"])
+      s.add_runtime_dependency(%q<activemodel>, [">= 3"])
       s.add_development_dependency(%q<test-unit>, [">= 2.1.1"])
-      s.add_development_dependency(%q<bundler>, [">= 1.0.0.rc.3"])
+      s.add_development_dependency(%q<bundler>, [">= 1.0.0"])
       s.add_development_dependency(%q<mocha>, [">= 0.9.8"])
       s.add_development_dependency(%q<shoulda>, [">= 2.11.3"])
     else
-      s.add_dependency(%q<activemodel>, [">= 3.0.0.rc"])
+      s.add_dependency(%q<activemodel>, [">= 3"])
       s.add_dependency(%q<test-unit>, [">= 2.1.1"])
-      s.add_dependency(%q<bundler>, [">= 1.0.0.rc.3"])
+      s.add_dependency(%q<bundler>, [">= 1.0.0"])
       s.add_dependency(%q<mocha>, [">= 0.9.8"])
       s.add_dependency(%q<shoulda>, [">= 2.11.3"])
     end
   else
-    s.add_dependency(%q<activemodel>, [">= 3.0.0.rc"])
+    s.add_dependency(%q<activemodel>, [">= 3"])
     s.add_dependency(%q<test-unit>, [">= 2.1.1"])
-    s.add_dependency(%q<bundler>, [">= 1.0.0.rc.3"])
+    s.add_dependency(%q<bundler>, [">= 1.0.0"])
     s.add_dependency(%q<mocha>, [">= 0.9.8"])
     s.add_dependency(%q<shoulda>, [">= 2.11.3"])
   end
